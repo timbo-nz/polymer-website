@@ -37,7 +37,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <meta name="apple-mobile-web-app-title" content="People just call me Tim">
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
@@ -57,6 +57,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
+
+  <!-- Additional icon sets -->
+  <link rel="import" href="bower_components/iron-icons/image-icons.html">
+
 </head>
 
 <body unresolved>
@@ -79,18 +83,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Home</span>
           </a>
 
-          <a data-route="users" href="{{baseUrl}}users">
-            <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
-          </a>
-
-          <a data-route="books" href="{{baseUrl}}books">
-            <iron-icon icon="book"></iron-icon>
-            <span>Books</span>
+          <a data-route="photos" href="{{baseUrl}}photos">
+            <iron-icon icon="image:collections"></iron-icon>
+            <span>Photos</span>
           </a>
 
           <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
+            <iron-icon icon="favorite-border"></iron-icon>
             <span>Contact</span>
           </a>
         </paper-menu>
@@ -124,43 +123,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home">
               <paper-material elevation="1">
-                <p> Welcome to Timbo.nz, brought to you by the illustrious Tim Armitage, a junior web and mobile developer at Spark NZ & Archoneer Ltd.</p>
-                <p>Join me <s> and together we can rule the galaxy</s> as I fine-tune my mastery of the web developer world with my very own personal slice of the internet.</p>
+                <p> Welcome to Timbo.nz, the personal playground of Tim Armitage, a junior web and mobile developer at Spark NZ & Archoneer Ltd.</p>
+                <p>Join me <s> and together we can rule the galax-</s> as I fine-tune my mastery of the web developer world with my very own personal slice of the internet.</p>
                 <p>Some provisos:</p>
                 <my-list></my-list>
               </paper-material>
             </section>
 
-            <section data-route="users">
-              <paper-material elevation="1">
-                <h2 class="page-title">Users</h2>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
-              </paper-material>
-            </section>
-
-            <section data-route="user-info">
-              <paper-material elevation="1">
-                <h2 class="page-title">User: {{params.name}}</h2>
-                <div>This is {{params.name}}'s section</div>
-              </paper-material>
-            </section>
-
-            <section data-route="books">
-              <paper-material elevation="1">
-                <p>This is the books page.</p>
-              </paper-material>
-            </section>
 
             <section data-route="contact">
               <paper-material elevation="1">
-                <h2 class="page-title">Contact</h2>
-                <p>This is the contact section</p>
+                <h2 class="page-title">Social Media</h2>
+                <span>
+                  <a target="_blank" href="https://nz.linkedin.com/in/timothyarmitage"><image alt="Find me on linkedin" src="/images/linkedin-box.png"/></a>
+                  <a target="_blank" href="https://github.com/timbo-nz/"><image alt="Find me on github" src="/images/github-circle.png"/></a>
+                </span>
               </paper-material>
             </section>
+
+            <section data-route="photos">
+              <photo-cards></photo-cards>
+              <!-- <my-greeting></my-greeting> -->
+            </section>
+
           </iron-pages>
         </div>
       </paper-scroll-header-panel>
