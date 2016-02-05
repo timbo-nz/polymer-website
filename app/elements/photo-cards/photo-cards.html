@@ -3,29 +3,45 @@
 
 <dom-module id="photo-cards">
   <template>
-    <style include="shared-styles">
-      :host {
-        display: block;
-      }
+  <style include="shared-styles">
+  :host {
+    display: block;
+  }
 
-      span,
-      input {
-        @apply(--paper-font-body2);
-      }
-    </style>
-
+  </style>
+  <template is="dom-repeat" items="{{items}}">
+    <section>
+      <paper-material class="card">
+      <img class="card-photo-image"src={{item.url}}/>
+      <p>{{item.description}}</p>
+      <button class='card-button' on-click="handleClick">Click Me!</button>
+    </paper-material>
+    </section>
   </template>
+</template>
 
-  <script>
-    (function() {
-      'use strict';
+<script>
+Polymer({
+  is: 'photo-cards',
+  handleClick: function(){
+    alert('Who are you? Alice from Wonderland');
+  },
 
-      Polymer({
-        is: 'photo-cards',
+  properties: {
+    items: {
+      type: Array,
+      notify: true,
+    }
+  },
 
-        properties: {
-        }
-      });
-    })();
-  </script>
+  ready: function() {
+    this.items = [
+      {url:'http://i.imgur.com/gCPIEB0.jpg', description:'Mr Burns\' shenanigans'},
+      {url:'http://i.imgur.com/R5Iy07c.jpg', description:'Muddy Dog'},
+      {url:'http://i.imgur.com/h34bwWh.jpg', description: 'Emperor\'s New Groove'}
+    ];
+  }
+
+});
+</script>
 </dom-module>
