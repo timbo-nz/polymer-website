@@ -37,6 +37,24 @@ body {
   text-transform: uppercase;
 }
 
+.button-container button{
+  background: #B8AE9C;
+  border: 0px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+}
+
+.button-container button:hover{
+  background: #ACCFCC;
+  border: 0px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 2px;
+}
+
 .card-photo-image{
   max-width: 400px;
   display: block;
@@ -46,7 +64,7 @@ body {
   max-width: 400px;
   display: block;
   height: 30px;
-  opacity: .6;
+  opacity: .66;
   background-color: black;
 }
 
@@ -55,7 +73,7 @@ body {
   display: block;
   height: 30px;
   background-color: black;
-  opacity: .6;
+  opacity: .66;
   margin-top: -40px;
   color: white;
   padding-top: 10px;

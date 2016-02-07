@@ -15,7 +15,7 @@
         <div class="header"></div>
         <div class="image-container"><img class="card-photo-image"src={{item.url}}/></div>
         <div class="post-title">{{item.title}}</div>
-        <div class="description-container">{{item.description}}</div>
+        <div class="description-container">{{item.content}}</div>
         <div class="button-container"><button class='card-button' on-click="handleClick">View Post</button></div>
       </paper-material>
     </section>
@@ -38,9 +38,9 @@ Polymer({
 
   ready: function() {
     this.items = [
-      {url:'http://i.imgur.com/YV8VfSU.png', title:'Mr Burns', description:'Mr Burns\' shenanigans and this is now a test of a reeeeeeeeeeeeeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaally long string lets see how this manages to fuck everything up'},
-      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog', description:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
-      {url:'http://i.imgur.com/llO4Jtn.jpg', title:'The Best Disney Film',description: 'Emperor\'s New Groove is the greatest film because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it.'}
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/llO4Jtn.jpg', title:'The Best Disney Film',content: 'Emperor\'s New Groove is the greatest film because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it.'}
     ];
   }
 
