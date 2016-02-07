@@ -13,16 +13,60 @@ body {
   color: #333;
 }
 
-.card-photo-image{
-  display: inline;
-  max-width: 100%;
-}
-
 .card{
   text-align: center;
-  padding: 15px;
+  max-width: 400px;
+  margin-bottom: 40px;
 }
 
-.card p{
-  text-transform: capitalize;
+.description-container{
+  align-items: center;
+  display: block;
+  height: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 90%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card-photo-image{
+  max-width: 400px;
+  display: block;
+}
+
+.header{
+  max-width: 400px;
+  display: block;
+  height: 30px;
+  opacity: .6;
+  background-color: black;
+}
+
+.post-title{
+  max-width: 400px;
+  display: block;
+  height: 30px;
+  background-color: black;
+  opacity: .6;
+  margin-top: -40px;
+  color: white;
+  padding-top: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.image-container{
+  margin-top: -30px;
+  max-width: 500px;
+  max-height: 300px;
+  display: block;
+  overflow: hidden;
 }

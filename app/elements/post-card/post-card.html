@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+
+<dom-module id="post-card">
+  <template>
+  <style include="shared-styles">
+  :host {
+    display: block;
+  }
+
+  </style>
+  <template is="dom-repeat" items="{{items}}">
+    <section>
+      <paper-material class="card">
+        <div class="header"></div>
+        <div class="image-container"><img class="card-photo-image"src={{item.url}}/></div>
+        <div class="post-title">{{item.title}}</div>
+        <div class="description-container">{{item.description}}</div>
+        <div class="button-container"><button class='card-button' on-click="handleClick">View Post</button></div>
+      </paper-material>
+    </section>
+  </template>
+</template>
+
+<script>
+Polymer({
+  is: 'post-card',
+  handleClick: function(){
+    alert('Not implemented yet');
+  },
+
+  properties: {
+    items: {
+      type: Array,
+      notify: true,
+    }
+  },
+
+  ready: function() {
+    this.items = [
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Mr Burns', description:'Mr Burns\' shenanigans and this is now a test of a reeeeeeeeeeeeeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaally long string lets see how this manages to fuck everything up'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog', description:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/llO4Jtn.jpg', title:'The Best Disney Film',description: 'Emperor\'s New Groove is the greatest film because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it.'}
+    ];
+  }
+
+});
+</script>
+</dom-module>
