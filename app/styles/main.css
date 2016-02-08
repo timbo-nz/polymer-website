@@ -88,3 +88,8 @@ body {
   display: block;
   overflow: hidden;
 }
+
+.post-card-container{
+  display: inline-block;
+  padding-right: 62px;
+}

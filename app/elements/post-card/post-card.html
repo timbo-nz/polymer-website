@@ -10,7 +10,7 @@
 
   </style>
   <template is="dom-repeat" items="{{items}}">
-    <section>
+    <section class="post-card-container">
       <paper-material class="card">
         <div class="header"></div>
         <div class="image-container"><img class="card-photo-image"src={{item.url}}/></div>
@@ -38,9 +38,15 @@ Polymer({
 
   ready: function() {
     this.items = [
-      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
-      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
-      {url:'http://i.imgur.com/llO4Jtn.jpg', title:'The Best Disney Film',content: 'Emperor\'s New Groove is the greatest film because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it.'}
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball - 8/2/2016', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog - 8/2/2016', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball - 8/2/2016', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog - 8/2/2016', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball - 8/2/2016', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog - 8/2/2016', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/YV8VfSU.png', title:'Polandball - 8/2/2016', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'http://i.imgur.com/cZgM2mE.jpg', title:'Muddy Dog - 13/10/2015', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'http://i.imgur.com/llO4Jtn.jpg', title:'The Best Disney Film - 8/9/2015',content: 'Emperor\'s New Groove is the greatest film because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it because it has Kronk in it.'}
     ];
   }
 
