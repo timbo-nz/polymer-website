@@ -88,6 +88,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Posts</span>
           </a>
 
+          <a data-route="projects" href="{{baseUrl}}projects">
+            <iron-icon icon="view-agenda"></iron-icon>
+            <span>Projects</span>
+          </a>
+
           <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="favorite-border"></iron-icon>
             <span>Contact</span>
@@ -144,12 +149,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <post-card></post-card>
             </section>
 
-            <section data-route="post-content">
+            <section class="full-post" data-route="post-content">
               <paper-material elevation="1">
-                <img src=http://i.imgur.com/{{params.url}}/>
-                <h2 class="post-title">{{params.title}}</h2>
-                <p>Posted on: {{params.date}}</p>
-                <p>{{params.content}}</p>
+                <div class="full-post-image-container"><img class="full-post-image" src=http://i.imgur.com/{{params.url}}/></div>
+                <div class="full-post-title-container"><h2>{{params.title}}</h2></div>
+                <div class="full-post-date-container"><h4>Posted on: {{params.date}}</h4></div>
+                <div class="full-post-content-container"><p>{{params.content}}</p></div>
+              </paper-material>
+            </section>
+
+            <section class="projects-section" data-route="projects">
+              <paper-material elevation="1">
+                <h2>Projects</h2>
+                <p>I have had the opportunity to work on a few really cool projects- both web and native mobile apps.</p>
+                <p>Most recently I have joined the Bigpipe team at Spark Ventures, but I can't tell you about that just yet.</p>
+                <p>I was involved in making Archoneer's "OrangeOn" - a native Android application designed to help General Practitioners keep track of their patients' diet and exercise programmes.</p>
+                <p>There's obviously this website, which is a little pet project of my own. Which is lucky I suppose, as it would appear most of the projects I am currently on are under non-disclosure agreements.</p>
+              </paper-material>
             </section>
 
           </iron-pages>

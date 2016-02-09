@@ -8,17 +8,24 @@
     display: block;
   }
 
+  paper-material:hover {
+    @apply(--shadow-elevation-8dp);
+  }
+
   </style>
   <template is="dom-repeat" items="{{items}}">
+
     <section class="post-card-container">
-      <paper-material class="card">
-        <div class="header"></div>
-        <div class="image-container"><img class="card-photo-image"src="http://i.imgur.com/{{item.url}}"/></div>
-        <div class="post-title">{{item.date}} // {{item.title}}</div>
-        <div class="description-container">{{item.content}}</div>
-        <a href$="{{baseUrl}}posts/{{item.url}}/{{item.date}}/{{item.title}}/{{item.content}}"<div class="button-container">View Post</div>
-      </paper-material>
+      <a href$="{{baseUrl}}posts/{{item.url}}/{{item.date}}/{{item.title}}/{{item.content}}">
+        <paper-material class="card" elevation="1" animated="true">
+          <div class="header"></div>
+          <div class="image-container"><img class="card-photo-image"src="http://i.imgur.com/{{item.url}}"/></div>
+          <div class="post-title">{{item.date}} // {{item.title}}</div>
+          <div class="description-container">{{item.description}}</div>
+        </paper-material>
+      </a>
     </section>
+
   </template>
 </template>
 
@@ -38,8 +45,8 @@ Polymer({
 
   ready: function() {
     this.items = [
-      {url:'YV8VfSU.png', title:'Polandball', date:'8-2-2016', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
-      {url:'cZgM2mE.jpg', title:'Muddy Dog', date:'7-2-2016', content:'This little asshole thougth he could get away with it too little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole little asshole '},
+      {url:'YV8VfSU.png', title:'Polandball', date:'8-2-2016', description:'An Ode to Polandball', content:'In a nutshell "Polandball" is an obscure, community sourced webcomic. And yet, it is so much more than that. An entire Polandball subculture exists - the way countryballs look and interact with each other are just the tip of the iceberg. Some countryballs are not to be seen dead without their accessories, see America and his sunglasses or the United Kingdom\'s hat and monocle combination.'},
+      {url:'cZgM2mE.jpg', title:'Inaugural Post', date:'7-2-2016', description:'Test post please ignore', content:'Not really! This is the first post on my very rough draft of a website. There are so many features and ideas that I have for this place. If you stick around, you just might see some of them in action.'},
     ];
   }
 

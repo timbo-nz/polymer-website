@@ -17,6 +17,7 @@ body {
   text-align: center;
   max-width: 400px;
   margin-bottom: 40px;
+  text-decoration: none;
 }
 
 .description-container{
@@ -92,4 +93,28 @@ body {
 .post-card-container{
   display: inline-block;
   padding-right: 62px;
+}
+
+.full-post{
+  max-width: 700px;
+}
+
+.full-post-image-container{
+  text-align: center;
+}
+
+.full-post-image{
+  max-width: 600px;
+}
+
+.full-post-title-container{
+
+}
+
+.full-post-date-container{
+
+}
+
+.full-post-content-container{
+
 }
